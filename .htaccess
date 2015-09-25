@@ -1,0 +1,30 @@
+# Кодировка по умолчанию
+AddDefaultCharset UTF-8
+
+# Запрет отображения содержимого каталога при отсутствии индексного файла
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+
+  # Задать базовый URL для преобразований
+  RewriteBase /
+
+  # Включить перенаправления
+  RewriteEngine on
+
+  # Перенаправить на домен без www
+  RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+  RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+  # Для перенаправления на https - раскомментировать две нижние строки
+  # RewriteCond %{HTTPS} !on
+  # RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+  # Исключения (шрифты, картинки, стили, скрипты)
+  RewriteCond %{REQUEST_URI} !^/(.*)\.(eot|woff|ttf|svg|ico|png|gif|css|js)(.*)$ [NC]
+  RewriteCond %{REQUEST_URI} !^/robots\.txt$ [NC]
+
+  # Перенаправить в единую точку входа
+  RewriteRule ^(.*)$ index.php [L]
+
+</IfModule>
