@@ -12,3 +12,6 @@ define('DIR_TAMPLATES', '/tamplates');
 
 // Подключить конфигурацию
 require_once DIR_ROOT . DIR_CONFIG . '/main.php';
+
+// Подготовить сессию
+require_once DIR_ROOT . DIR_CORE . '/session.php';
