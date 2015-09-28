@@ -2,12 +2,13 @@
 
 // Объявить константы с директориями
 define('DIR_ROOT',      $_SERVER['DOCUMENT_ROOT']);
-define('DIR_CONFIG',    DIR_ROOT . '/config');
-define('DIR_CORE',      DIR_ROOT . '/core');
-define('DIR_MODULES',   DIR_ROOT . '/modules');
-define('DIR_CTRL',      DIR_ROOT . '/ctrl');
-define('DIR_SITE',      DIR_ROOT . '/site');
-define('DIR_TAMPLATES', DIR_ROOT . '/tamplates');
+define('DIR_CONFIG',    '/config');
+define('DIR_CORE',      '/core');
+define('DIR_CLASSES',   '/classes');
+define('DIR_MODULES',   '/modules');
+define('DIR_CTRL',      '/ctrl');
+define('DIR_SITE',      '/site');
+define('DIR_TAMPLATES', '/tamplates');
 
 // Подключить конфигурацию
-require_once DIR_CONFIG . '/main.php';
+require_once DIR_ROOT . DIR_CONFIG . '/main.php';
