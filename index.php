@@ -4,7 +4,7 @@
 define('DIR_ROOT',      $_SERVER['DOCUMENT_ROOT']);
 define('DIR_CONFIG',    '/config');
 define('DIR_CORE',      '/core');
-define('DIR_CLASSES',   '/classes');
+define('DIR_STATIC',    '/static');
 define('DIR_MODULES',   '/modules');
 define('DIR_CTRL',      '/ctrl');
 define('DIR_SITE',      '/site');
