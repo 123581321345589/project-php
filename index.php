@@ -15,3 +15,6 @@ require_once DIR_ROOT . DIR_CONFIG . '/main.php';
 
 // Подготовить сессию
 require_once DIR_ROOT . DIR_CORE . '/session.php';
+
+// Настроить авто подключение статических классов
+require_once DIR_ROOT . DIR_CORE . '/autoload.php';
