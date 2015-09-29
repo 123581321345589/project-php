@@ -18,3 +18,6 @@ require_once DIR_ROOT . DIR_CORE . '/session.php';
 
 // Настроить авто подключение статических классов
 require_once DIR_ROOT . DIR_CORE . '/autoload.php';
+
+// Подготовить глобальные массивы
+require_once DIR_ROOT . DIR_CORE . '/global_arrays.php';
