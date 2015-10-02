@@ -24,10 +24,10 @@ switch (DIR_ROOT) {
 define('ENVIRONMENT_CONFIG', DIR_CONFIG . '/' . ENVIRONMENT);
 
 // Просканировать директорию
-if (is_dir(DIR_CONFIG)) {
-  foreach (scandir(DIR_CONFIG) as $item) {
+if (is_dir(DIR_ROOT . DIR_CONFIG)) {
+  foreach (scandir(DIR_ROOT . DIR_CONFIG) as $item) {
 
-    $config_file = DIR_CONFIG . '/' . $item;
+    $config_file = DIR_ROOT . DIR_CONFIG . '/' . $item;
 
     if (is_file($config_file) and $config_file != __FILE__) {
 
