@@ -21,7 +21,7 @@ switch (DIR_ROOT) {
 }
 
 // Сформировать путь к нужной папке
-define('ENVIRONMENT_CONFIG', DIR_CONFIG . '/' . ENVIRONMENT);
+define('ENVIRONMENT_CONFIG', DIR_ROOT . DIR_CONFIG . '/' . ENVIRONMENT);
 
 // Просканировать директорию
 if (is_dir(DIR_ROOT . DIR_CONFIG)) {
